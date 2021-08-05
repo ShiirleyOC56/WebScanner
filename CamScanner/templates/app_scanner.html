@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>WebScanner</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href= "{{ url_for('static',filename='css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/templatemo-digital-trend.css')}}">
+
+</head>
+<body>
+
+     <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg position-absolute">
+        <div class="container">
+          <a class="navbar-brand" href="{{ url_for('home')}}">
+              <i class="fa fa-camera-retro"></i>
+             WebScanner
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link">Integranntes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('app_scanner')}}" class="nav-link active contact"><i class="fa fa-play mr-2"></i>Run</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+     <!-- PROCESAMIENTO DE LA IMAGEN -->
+     <section class="contact section-padding">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center" data-aos="fade-up">
+
+                      <h1 class="mb-4"><strong>Subir</strong> aquí tu archivo</h1>
+                      <form action="/scan" method="POST" enctype="multipart/form-data">
+                        <p>Seleccione su <strong>imagen</strong>:</p>
+                        <input type="file" name="imagen_original" id= "seleccionArchivos" class="form-control">
+                        <br>
+                        <img id="imagenPrevisualizacion">
+                        <script src="{{ url_for('static',filename='js/script.js')}}"></script>
+                        <br>
+                        <br>
+                        <div class="row">
+                          <div class="col-lg-2 col-12">
+                            <input type="submit" class="btn btn-primary" value="Run" onclick="move('myBarr')">
+                          </div>
+                          
+                          <div class="col-lg-6 col-12">
+                            <div class="p-3 mb-2 bg-warning text-dark">
+                              <div id="myBarr" class="p-3 mb-2 bg-info text-white" style="width: 5%">5%</div>
+                            </div>
+                          </div>
+                        </div>
+                       </form>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Web<strong>Scanner</strong></h1>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="my-4">Información</h4>
+
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                soxa@unsa.edu.pe
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                rcespedes@unsa.edu.pe
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                rmamanis@unsa.edu.pe
+              </a>
+            </p>
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                yquispeq@unsa.edu.pe
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="my-4">Centro de estudios</h4>
+            <p class="mb-1">
+              <i class="fa fa-home mr-2 footer-icon"></i> 
+              Universidad Nacional de San Agustín - Escuela profesional de Ciencia de la Computación
+            </p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+            <p class="copyright-text">Copyright &copy; 2021
+          </div>
+
+          <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+            <ul class="social-icon">
+              <li><a href="#" class="fa fa-github"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/smoothscroll.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/custom.js')}}"></script>
+     <script>
+        // Progress Bars
+        function move(name) {
+          var elem = document.getElementById(name);   
+          var width = 5;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width == 100) {
+              clearInterval(id);
+            } else {
+              width++; 
+              elem.style.width = width + '%'; 
+              elem.innerHTML = width * 1  + '%';
+            }
+          }
+        }
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+     <title>WebScanner</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href= "{{ url_for('static',filename='css/bootstrap.min.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css')}}">
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css')}}">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{{ url_for('static',filename='css/templatemo-digital-trend.css')}}">
+
+</head>
+<body>
+
+     <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home')}}">
+              <i class="fa fa-camera-retro"></i>
+              WebScanner
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link smoothScroll">Integrantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('app_scanner')}}" class="nav-link contact"><i class="fa fa-play mr-2"></i>Run</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+     <!-- HERO -->
+     <section class="hero hero-bg d-flex justify-content-center align-items-center">
+               <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                              <div class="hero-text">
+
+                                   <h1 class="text-white" data-aos="fade-up">Usar la aplicación</h1>
+
+                                   <a href="{{ url_for('app_scanner')}}" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100"><i class="fa fa-play mr-2"></i>Run</a>
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                          <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+
+                            <img src="{{ url_for('static',filename='images/working-girl.png')}}" class="img-fluid" alt="working girl">
+                          </div>
+                        </div>
+
+                    </div>
+               </div>
+     </section>
+
+     <!-- ABOUT -->
+     <section class="about section-padding pb-0" id="about">
+          <div class="container">
+               <div class="row">
+                    <div class="col-lg-7 mx-auto col-md-10 col-12">
+                         <div class="about-info">
+                              <h2 class="mb-4" data-aos="fade-up">Curso: <strong>Computación Gráfica </strong></h2>
+                              <p class="mb-0" data-aos="fade-up">WebScanner es una aplicación que te permitirá tranformar una foto de un documento en un documento escaneado.</p>
+                         </div>
+                         <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+                          <img src="static/images/comp_grafica.jpg" class="img-fluid" alt="office">
+                        </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+
+     <!-- PROJECT -->
+     <section class="project section-padding" id="project">
+          <div class="container-fluid">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">
+
+                        <h2 class="mb-5 text-center" data-aos="fade-up">
+                            Integrantes:
+                        </h2>
+
+                         <div class="owl-carousel owl-theme" id="project-slide">
+                              <div class="item project-wrapper" data-aos="fade-up" data-aos-delay="100">
+                                   <img src="static/images/Integrantes/icon_mujer.png" class="img-fluid" alt="project image">
+
+                                   <div class="project-info">
+                                        <h3>
+                                             <a href="#">
+                                                  <span>Shirley Michelle Oxa Cacya</span>
+                                             </a>
+                                        </h3>
+                                   </div>
+                              </div>
+
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="static/images/Integrantes/icon_hombre.png" class="img-fluid" alt="project image">
+                                   <div class="project-info">
+                                        <h3>
+                                             <a href="#">
+                                                  <span>Rodrigo Alexander Mamani Sucacahua</span>
+                                             </a>
+                                        </h3>
+                                   </div>
+                              </div>
+
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="static/images/Integrantes/icon_mujer.png" class="img-fluid" alt="project image">
+                                   <div class="project-info">
+                                        <h3>
+                                             <a href="#">
+                                                  <span>Yara Quispe Quispe</span>
+                                             </a>
+                                        </h3>
+                                   </div>
+                              </div>
+
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="static/images/Integrantes/icon_hombre.png" class="img-fluid" alt="project image">
+                                   <div class="project-info">
+                                        <h3>
+                                             <a href="#">
+                                                  <span>Renato Cespedes Fuentes</span>
+                                             </a>
+                                        </h3>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+     <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+                <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Web<strong>Scanner</strong></h1>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="my-4">Información</h4>
+    
+                <p>
+                  <a href="#">
+                    <i class="fa fa-envelope mr-2 footer-icon"></i>
+                    soxa@unsa.edu.pe
+                  </a>
+                </p>
+                <p>
+                    <a href="#">
+                      <i class="fa fa-envelope mr-2 footer-icon"></i>
+                      rcespedes@unsa.edu.pe
+                    </a>
+                  </p>
+                  <p>
+                    <a href="#">
+                      <i class="fa fa-envelope mr-2 footer-icon"></i>
+                      rmamanis@unsa.edu.pe
+                    </a>
+                  </p>
+                  <p>
+                    <a href="#">
+                      <i class="fa fa-envelope mr-2 footer-icon"></i>
+                      yquispeq@unsa.edu.pe
+                    </a>
+                  </p>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="my-4">Centro de estudios</h4>
+                <p class="mb-1">
+                  <i class="fa fa-home mr-2 footer-icon"></i> 
+                  Universidad Nacional de San Agustín - Escuela profesional de Ciencia de la Computación
+                </p>
+              </div>
+    
+              <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+                <p class="copyright-text">Copyright &copy; 2021
+              </div>
+    
+              <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                <ul class="social-icon">
+                  <li><a href="#" class="fa fa-github"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+     <!-- SCRIPTS -->
+     <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/smoothscroll.js')}}"></script>
+     <script src="{{ url_for('static',filename='js/custom.js')}}"></script>
+</body>
+</html>
